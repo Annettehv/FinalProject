@@ -1,0 +1,48 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #F0EBE0;
+	height: 100%;
+	width: 100%;
+	overflow: hidden; /*make sure to remove this on the longer pages*/
+}
+
+header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 2rem;
+}
+
+.log-out-button {
+	width: 6rem;
+	height: 1.8rem;
+	background-color: #2A6965;
+	border: none;
+	cursor: pointer;
+	border-radius: 1rem;
+	color: #F0EBE0;
+}
+
+.header-paragraph {
+	font-size: 3rem;
+	position: relative; /* Use relative positioning */
+	top: 50px; /* Adjust the value to move the paragraph down */
+	padding-left: 12rem;
+	padding-top: 3rem;
+}
+
+.books-image-container {
+	background-image: url("../assets/images/books.png");
+	background-size: cover; /* Cover the container */
+	background-repeat: no-repeat; /* Prevent repetition */
+	width: 600px; /* Adjust width as needed */
+	height: 700px; /* Adjust height as needed */
+	position: absolute; /* Use absolute positioning */
+	bottom: 0; /* Position at the bottom of the page */
+	right: 20px; /* Adjust the value to position the image */
+}
