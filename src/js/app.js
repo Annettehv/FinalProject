@@ -1,7 +1,6 @@
-alert('test');
 
-import { validate } from "json-schema";
 import { validateSignInForm } from "./signInValidation";
+
 
 // selecting the sign in form elements
 
@@ -24,6 +23,5 @@ signInButton.addEventListener("click", (e) => {
 	);
 });
 
-console.log('test');
 
 

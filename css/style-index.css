@@ -83,6 +83,18 @@ input {
 	cursor: pointer;
 }
 
+
+
 .email-error, .password-error, .submission-error {
 	visibility: hidden;
+}
+
+
+
+/* --- */
+
+.sign-up-form {
+	visibility: hidden; 
+
+	
 }
