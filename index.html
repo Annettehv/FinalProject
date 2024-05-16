@@ -31,30 +31,43 @@
 
 			<button class="sign-in-button">Sign in</button>
 
+			<p class="submission-error">Error</p>
+
 			<p class="create-account-p">Dont have an account? Create one <button class="sign-up-form_open">here</button>
 			</p>
 
-			<p class="submission-error">Error</p>
+			
 		</form>
+<!-- --------- -->
+		<div class="sign-up-form-container">
+			<div class="close-sign-up-container">
+				<button class="sign-up-form_close">x</button>
+			</div>
 
-		<form class="sign-up-form">
-			<label for="fullname">Full name<sup>*</sup></label>
-			<input type="fullname" name="fullname" class="fullname">
-			<p class="fullname-error">Error</p>
+			<form class="sign-up-form">
 
-			<label for="email">Email<sup>*</sup></label>
-			<input type="email" name="email" class="email">
-			<p class="email-error">Error</p>
+				<label for="firstname">Firstname<sup>*</sup></label>
+				<input type="text" name="firstname" class="firstname">
+				<!-- <p class="firstname-error">Error</p> -->
 
-			<label for="password">Password<sup>*</sup></label>
-			<input type="password" name="password" class="password">
-			<p class="password-error">Error</p>
+				<label for="lastname">Lastname<sup>*</sup></label>
+				<input type="text" name="lastname" class="lastname">
+				<!-- <p class="lastname-error">Error</p> -->
 
-			<button class="sign-up-button">Sign in</button>
+				<label for="sign-up-email">Email<sup>*</sup></label>
+				<input type="email" name="sign-up-email" class="sign-up-email">
+				<!-- <p class="sign-up-email-error">Error</p> -->
 
+				<label for="sign-up-password">Password<sup>*</sup></label>
+				<input type="password" name="sign-up-password" class="sign-up-password">
+				<!-- <p class="sign-up-password-error">Error</p> -->
 
-			<p class="submission-error">Error</p>
-		</form>
+				<p class="sign-up-error">Error</p>
+
+				<button class="sign-up-button">Sign in</button>
+
+			</form>
+		</div>
 		
 
 		<div class="books-image-container">

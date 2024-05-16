@@ -12,7 +12,7 @@ const passwordError = document.querySelector('.password-error');
 const signInForm = document.querySelector('.sign-in-form');
 const submissionError =  document.querySelector('.submission-error');
 
-
+console.log(emailError);
 signInButton.addEventListener("click", (e) => {
 	e.preventDefault();
 	validateSignInForm(

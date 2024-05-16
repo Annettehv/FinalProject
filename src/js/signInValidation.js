@@ -8,7 +8,7 @@ const validateSignInForm = (email, password, emailErrorElement, passErrorElement
 
 	if (!email && !password) {
 		errors.errorStatus = true,
-		errors.emailErrorElement = "Email is required!",
+		errors.emailError = "Email is required!",
 		errors.passwordError = "Password is required!",
 
 		emailErrorElement.style.visibility = 'visible';
@@ -21,7 +21,7 @@ const validateSignInForm = (email, password, emailErrorElement, passErrorElement
 		
 	} else if (!email){
 		errors.errorStatus = true,
-		errors.emailErrorElement = "Email is required!",
+		errors.emailError = "Email is required!",
 		errors.passwordError = "",
 
 		emailErrorElement.style.visibility = 'visible';
