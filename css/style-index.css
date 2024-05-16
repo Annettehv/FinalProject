@@ -8,7 +8,7 @@ body {
 	background-color: #F0EBE0;
 	height: 100%;
 	width: 100%;
-	overflow: hidden; /*make sure to remove this on the longer pages*/
+	/* overflow: hidden; */ /*make sure to remove this on the longer pages*/
 }
 
 header {
@@ -94,7 +94,7 @@ input {
 
 /* --- */
 
- .sign-up-form-container {
+/*  .sign-up-form-container {
 	padding-left: 17rem;
 	padding-top: 6rem;
 	width: 50%;
@@ -102,6 +102,25 @@ input {
 	flex-direction: column;
 	gap: 0.5rem;
 	display:none;
+	
+
+} */
+
+.sign-up-form-container {
+	width: 30%;
+	height: 50%;
+	position: absolute;
+	top: 50%;
+	left: 30%;
+	transform: translate(-50%, -50%);
+	border-radius: 0.5rem;
+	background-color: #F8C135;
+	padding: 2rem;
+	margin-top: 9rem;
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 3rem;
+	display: none;
 
 }
  
@@ -136,6 +155,7 @@ input {
 	border: none;
 	border-radius: 0.1rem;
 	color:#F0EBE0;
+	cursor: pointer;
 }
 
 
