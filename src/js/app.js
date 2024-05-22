@@ -1,6 +1,19 @@
+import firebaseConfig  from "./firebaseConfig";
+import {initializeApp} from "firebase/app";
+import {getAuth, createUserWithEmailAndPassword} from "firebase/auth";
+
+// initialize firebase
+initializeApp(firebaseConfig)
+
+console.log(firebaseConfig)
+
+// initialize auth service
+
+const authService = getAuth()
 
 import { validateSignInForm } from "./signInValidation";
 import { validateSignUpForm } from "./signUpValidation";
+
 
 
 // selecting the sign in form elements
@@ -42,7 +55,7 @@ closeSignUpFormButton.addEventListener('click', (e) =>{
 
 console.log(emailError);
 
-signInButton.addEventListener("click", (e) => {
+ /* signInButton.addEventListener("click", (e) => {
 	e.preventDefault();
 	validateSignInForm(
 	emailInput.value,
@@ -50,9 +63,9 @@ signInButton.addEventListener("click", (e) => {
 	emailError,
 	passwordError
 	);
-});
+});  */
 
-signUpButton.addEventListener('click', (e) => {
+ /* signUpButton.addEventListener('click', (e) => {
 	e.preventDefault();
 	validateSignUpForm(
 	signUpFirstname.value,
@@ -61,7 +74,49 @@ signUpButton.addEventListener('click', (e) => {
 	signUpPassword.value,
 	signUpError
 	);
+})   */
+
+// handle sign up action
+
+function signUpUser(){
+	const { signUpErrorStatus } = validateSignUpForm(
+	signUpFirstname.value.trim(),
+	signUpLastname.value.trim(),
+	signUpEmail.value.trim(),
+	signUpPassword.value.trim(),
+	signUpError
+	);
+
+	console.log('first name:', signUpFirstname.value);
+	console.log('last name:', signUpLastname.value);
+	console.log('email:', signUpEmail.value);
+	console.log('password:', signUpPassword.value);
+
+
+	if(signUpErrorStatus()){
+		return;
+	} else {
+		const newUser = {
+			firstname:signUpFirstname.value.trim(),
+			lastname:signUpLastname.value.trim(),
+			signUpEmail:signUpEmail.value.trim(),
+			signUpPassword:signUpPassword.value.trim()
+		}
+		createUserWithEmailAndPassword(authService,newUser.signUpEmail,newUser.signUpPassword)
+		.then(()=>{
+			signUpForm.reset();
+			signUpFormContainer.style.display = 'none';
+		})
+		/* .then((err)=> console.log(err.message)) */
+		.catch((err) => console.log('Error creating user:', err.message));
+	}
+}
+
+signUpButton.addEventListener('click', (e)=>{
+	e.preventDefault();
+	signUpUser();
 })
+
 
 
 

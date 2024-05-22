@@ -18,7 +18,7 @@ header {
 	padding: 2rem;
 }
 
-.log-out-button {
+.sign-out-button {
 	width: 6rem;
 	height: 1.8rem;
 	background-color: #2A6965;
@@ -86,7 +86,7 @@ input {
 
 
 
-.email-error, .password-error, .submission-error, .sign-up-error {
+.email-error, .password-error, .submission-error, .sign-up-error, .sign-out-button {
 	visibility: hidden;
 }
 
