@@ -86,7 +86,7 @@ input {
 
 
 
-.email-error, .password-error, .submission-error, .sign-up-error, .sign-out-button {
+.email-error, .password-error, .submission-error, .sign-up-error {
 	visibility: hidden;
 }
 

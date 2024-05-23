@@ -1,6 +1,6 @@
 import firebaseConfig  from "./firebaseConfig";
 import {initializeApp} from "firebase/app";
-import {getAuth, createUserWithEmailAndPassword} from "firebase/auth";
+import {getAuth, createUserWithEmailAndPassword, signOut, signInWithEmailAndPassword} from "firebase/auth";
 
 // initialize firebase
 initializeApp(firebaseConfig)
@@ -39,6 +39,10 @@ const openSignUpFormButton = document.querySelector('.sign-up-form_open');
 const signUpFormContainer = document.querySelector('.sign-up-form-container');
 const signUpButton = document.querySelector('.sign-up-button');
 
+// selecting the sign out button
+
+const signOutButton = document.querySelector('.sign-out-button');
+
 // open sign up modal
 
 openSignUpFormButton.addEventListener('click', (e) =>{
@@ -53,9 +57,8 @@ closeSignUpFormButton.addEventListener('click', (e) =>{
 	signUpFormContainer.style.display = 'none'
 })
 
-console.log(emailError);
 
- /* signInButton.addEventListener("click", (e) => {
+  /* signInButton.addEventListener("click", (e) => {
 	e.preventDefault();
 	validateSignInForm(
 	emailInput.value,
@@ -63,9 +66,9 @@ console.log(emailError);
 	emailError,
 	passwordError
 	);
-});  */
+});   */
 
- /* signUpButton.addEventListener('click', (e) => {
+  signUpButton.addEventListener('click', (e) => {
 	e.preventDefault();
 	validateSignUpForm(
 	signUpFirstname.value,
@@ -74,7 +77,7 @@ console.log(emailError);
 	signUpPassword.value,
 	signUpError
 	);
-})   */
+})   
 
 // handle sign up action
 
@@ -117,6 +120,50 @@ signUpButton.addEventListener('click', (e)=>{
 	signUpUser();
 })
 
+// handle sign out action
 
+function signOutUser(){
+	signOut(authService)
+	.then(()=>{
+		console.log('signed out successfully');
+		signOutButton.style.visibility = 'hidden';
+		signInForm.style.display = 'flex';
+	})
+	.catch((err)=> console.log('sign out error'))
+}
 
+signOutButton.addEventListener('click', (e)=>{
+	e.preventDefault();
+	signOutUser();
+})
 
+// handle sign in action
+
+function signInUser (){
+	const {signInFormStatus} = validateSignInForm(
+		emailInput.value,
+		passwordInput.value,
+		emailError,
+		passwordError
+		);
+		if(signInFormStatus()){
+			return
+		} else {
+			const email = emailInput.value.trim();
+			const password = passwordInput.value.trim();
+			signInWithEmailAndPassword(authService, email, password)
+			.then(()=>{
+				signInForm.reset();
+				signOutButton.style.visibility = 'visible';
+				console.log('successfully signed in');
+			})
+			.catch(err => {
+				submissionError.textContent = err.message
+			})
+		}
+}
+
+signInButton.addEventListener('click', (e)=>{
+	e.preventDefault();
+	signInUser();
+})
