@@ -1,0 +1,163 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background-color: #F0EBE0;
+}
+
+.header {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem 4rem;
+}
+
+.search-header {
+	font-family:'Times New Roman', Times, serif;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2rem;
+	padding-top: 10rem;
+}
+
+.header-api-render-page {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem 4rem;
+}
+
+.search-container {
+    margin: 0px 0;
+    text-align: center;
+	padding-top: 7rem;
+}
+
+.search-container input[type="text"] {
+    width: 30rem;
+    height: 3rem;
+    border-radius: 1rem;
+    border: 1.5px solid black;
+    background-color: #Fffcf7;
+    cursor: pointer;
+    padding: 0.2rem;
+    margin-right: 10px;
+}
+
+.search-container button {
+    padding: 10px 20px;
+    font-size: 16px;
+	background-color: #2A6965;
+	color: #F0EBE0;
+	border: none;
+	cursor: pointer;
+	border-radius: 1rem;
+	height: 3rem;
+}
+
+.book-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.book-card {
+    width: 220px;
+    border: 1px solid #000;
+    background-color: #Fffcf7;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 490px;
+    box-sizing: border-box;
+}
+
+.book-card h2 {
+    font-size: 16px;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.book-card p {
+    font-size: 14px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.cover-img {
+    width: 100%;
+    height: auto;
+}
+
+.book-card button {
+    background-color: #2A6965;
+    color: #F0EBE0;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    cursor: pointer;
+    margin-top: 10px;
+    align-self: stretch;
+}
+
+#readingListButton {
+    display: block;
+    width: 8rem;
+    height: 1.8rem;
+    background-color: #2A6965;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    color: #F0EBE0;
+}
+
+
+#mainPageButton {
+    width: 8rem;
+    height: 1.8rem;
+    background-color: #2A6965;
+    border: none;
+    border-radius: 1rem;
+    cursor: pointer;
+    color: #F0EBE0;
+}
+
+/* Filter Container */
+.filter-container {
+    text-align: center;
+    margin: 20px 0;
+	
+}
+
+#genreFilter {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 1.5rem;
+	width: 20rem;
+	height: 2.5rem;
+	cursor: pointer;
+	text-align: center;
+	border: 1.5px solid black;
+}
+
+/* _________*/
+
+ .remove-button {
+   	display: block;
+	width: 8rem;
+	height: 1.8rem;
+	background-color: #2A6965;
+	border: none;
+	border-radius: 1rem;
+	cursor: pointer;
+	color:#F0EBE0
+}
+

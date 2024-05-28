@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Search</title>
+    <link rel="stylesheet" href="css/styles-api.css">
+</head>
+<body>
+
+	<div class="main-container">
+		<div class="header-api-render-page">
+			<!-- <h2 class="search-header">Search for books using title or author</h2> -->
+			<button onclick="goToReadingList()" id="readingListButton">My Reading List</button> <!-- Button to navigate to reading list -->
+		</div>
+		<div class="text-heading">
+			<h2 class="search-header">Search for books using title or author...</h2>
+		</div>
+		<div class="search-container">
+			<input type="text" id="searchInput" placeholder="Search books">
+			<button onclick="searchBooks()">Search</button>
+		</div>
+		<div id="searchResults" class="book-container"></div>
+	  
+
+	</div>
+
+    <script src="script.js"></script>
+</body>
+</html>

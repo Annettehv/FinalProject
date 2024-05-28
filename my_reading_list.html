@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Reading List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <!-- h1>My Reading List</h1> -->
+        <button onclick="goToMainPage()" id="mainPageButton">Main Page</button>
+    </div>
+    
+    <!-- Genre Filter Dropdown -->
+    <div class="filter-container">
+        <select id="genreFilter" onchange="filterByGenre()">
+            <option value="all">All Genres</option>
+            <!-- Add more genre options here -->
+            <option value="fiction">Fiction</option>
+            <option value="fantasy fiction">Fantasy fiction</option>
+            <option value="german fiction">German fiction</option>
+            <option value="new york times bestseller">New York Times bestseller</option>
+            <option value="humor">Humor</option>
+            <option value="composition and exercises">Compositions</option>
+            <option value="manuscripts, latin (medieval and modern)">Manuscripts, Latin</option>
+			<option value="classic">Classic</option>
+			<option value="biography">Biography</option>
+			<option value="history">Humor</option>
+			<option value="futurology">Dystopian</option>
+			<option value="unknown">Unknown genre</option>
+			<option value="british and irish fiction">British fiction</option>
+			<option value="romance">Romance</option>
+			<option value="antiquities">Antiquities</option>
+			<option value="poetry">Poetry</option>
+            <!-- Add additional genres based on the logs -->
+        </select>
+    </div>
+
+    <div id="readingList" class="book-container"></div>
+
+    <script src="script.js"></script>
+    <script>
+        displayReadingList(); // Call function to display reading list when page loads
+    </script>
+</body>
+</html>
+
