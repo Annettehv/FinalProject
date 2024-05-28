@@ -16,7 +16,6 @@
     <div class="filter-container">
         <select id="genreFilter" onchange="filterByGenre()">
             <option value="all">All Genres</option>
-            <!-- Add more genre options here -->
             <option value="fiction">Fiction</option>
             <option value="fantasy fiction">Fantasy fiction</option>
             <option value="german fiction">German fiction</option>
@@ -33,13 +32,12 @@
 			<option value="romance">Romance</option>
 			<option value="antiquities">Antiquities</option>
 			<option value="poetry">Poetry</option>
-            <!-- Add additional genres based on the logs -->
         </select>
     </div>
 
     <div id="readingList" class="book-container"></div>
 
-    <script src="script.js"></script>
+    <script src="src/js/script.js"></script>
     <script>
         displayReadingList(); // Call function to display reading list when page loads
     </script>
