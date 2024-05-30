@@ -57,6 +57,11 @@ body {
 	height: 3rem;
 }
 
+.search-container button:hover {
+    background-color: #F8C135;
+    color:#000;
+}
+
 .book-container {
     max-width: 1200px;
     margin: 20px auto;
@@ -107,6 +112,11 @@ body {
     align-self: stretch;
 }
 
+.book-card button:hover {
+    background-color: #F8C135;
+    color:#000;
+}
+
 #readingListButton {
     display: block;
     width: 8rem;
@@ -117,6 +127,11 @@ body {
     cursor: pointer;
     color: #F0EBE0;
     margin-right: 2rem;
+}
+
+#readingListButton:hover {
+    background-color: #F8C135;
+    color:#000;
 }
 
 
@@ -131,6 +146,11 @@ body {
     margin-right: 2rem;
 }
 
+#mainPageButton:hover{
+    background-color: #F8C135;
+    color:#000;
+}
+
 .sign-out-button {
 	width: 8rem;
 	height: 1.8rem;
@@ -140,6 +160,7 @@ body {
 	border-radius: 1rem;
 	color: #F0EBE0;
 }
+
 
 /* Filter Container */
 .filter-container {
@@ -169,5 +190,15 @@ body {
 	border-radius: 1rem;
 	cursor: pointer;
 	color:#F0EBE0
+}
+
+.remove-button:hover {
+    background-color: #F8C135;
+    color:#000;
+}
+
+.sign-in-button:hover {
+    background-color: #F8C135;
+    color:#000;
 }
 
