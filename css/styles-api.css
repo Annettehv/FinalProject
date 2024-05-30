@@ -62,7 +62,6 @@ body {
     margin: 20px auto;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
 }
 
 .book-card {
@@ -117,6 +116,7 @@ body {
     border-radius: 1rem;
     cursor: pointer;
     color: #F0EBE0;
+    margin-right: 2rem;
 }
 
 
@@ -128,6 +128,17 @@ body {
     border-radius: 1rem;
     cursor: pointer;
     color: #F0EBE0;
+    margin-right: 2rem;
+}
+
+.sign-out-button {
+	width: 8rem;
+	height: 1.8rem;
+	background-color: #2A6965;
+	border: none;
+	cursor: pointer;
+	border-radius: 1rem;
+	color: #F0EBE0;
 }
 
 /* Filter Container */
@@ -148,7 +159,6 @@ body {
 	border: 1.5px solid black;
 }
 
-/* _________*/
 
  .remove-button {
    	display: block;

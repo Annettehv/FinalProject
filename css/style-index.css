@@ -8,7 +8,6 @@ body {
 	background-color: #F0EBE0;
 	height: 100%;
 	width: 100%;
-	/* overflow: hidden; */ /*make sure to remove this on the longer pages*/
 }
 
 header {
@@ -38,12 +37,12 @@ header {
 
 .books-image-container {
 	background-image: url("../assets/images/books.png");
-	background-size: cover; /* Cover the container */
-	background-repeat: no-repeat; /* Prevent repetition */
+	background-size: cover; 
+	background-repeat: no-repeat; 
 	width: 600px; 
 	height: 700px; 
-	position: absolute; /* Use absolute positioning */
-	bottom: 0; /* Position at the bottom of the page */
+	position: absolute; 
+	bottom: 0; 
 	right: 20px; 
 }
 
@@ -54,7 +53,6 @@ header {
 	display: flex;
 	flex-direction: column;
 	gap: 0.5rem;
-	/* display: none; */
 }
 
 input {
@@ -91,7 +89,7 @@ input {
 
 
 
-/* --- */
+/*----------------------------------*/
 
 
 .sign-up-form-container {
@@ -131,7 +129,6 @@ input {
 }
 
 .close-sign-up-container {
-	/* padding: 1rem; */
 	display: flex;
 	justify-content: flex-end;
 	
